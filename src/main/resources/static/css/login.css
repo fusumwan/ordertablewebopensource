@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+/**************************************************
+ // Author: Sum Wan,FU
+ // Date: 7-5-2019
+ // Description: Css file for login.jsp
+ **************************************************/
+
+
+/*-- content --*/
+.col1 {
+    width: 23.33333333%;
+}
+.col2 {
+    width: 56.33333333%;
+}
+.col3 {
+	width: 20%;
+}
+
+.page-title-header{
+	font-size: 3.00rem;
+	font-weight: 400;
+	font-color: #666;
+	line-height: 1.2rem;
+}
+
+a.red_button {
+	background: #da3743;
+	color:#fff;
+}
+.form-input{
+	width:500px;
+}
+.forgot{
+
+}
+/*-- content --*/
+
+
+/*--responsive design--*/
+@media (max-width:1024px){
+
+
+}
+
+/*--responsive design--*/
+@media (max-width:768px){
+	
+	.col1 {
+		width: 0%;
+	}
+	.col2 {
+	    width: 100%;
+	}
+	.col3 {
+		width: 0%;
+	}
+	.form-input{
+		width:100%;
+	}
+}
+
+
+@media (max-width:640px){
+	.col1 {
+		width: 0%;
+	}
+	.col2 {
+	    width: 100%;
+	}
+	.col3 {
+		width: 0%;
+	}
+	.form-input{
+		width:100%;
+	}
+}
+
+@media (max-width:320px){
+	.col1 {
+		width: 0%;
+	}
+	.col2 {
+	    width: 100%;
+	}
+	.col3 {
+		width: 0%;
+	}
+	.form-input{
+		width:100%;
+	}
+}
+

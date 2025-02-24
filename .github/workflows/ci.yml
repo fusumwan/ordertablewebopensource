@@ -1,0 +1,32 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Login Dockerhub
+      env:
+        DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+      run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+      #run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD  
+    
+    - name: Build the Docker image
+      run: docker build -t timothyfudocker/ordertablewebopensource:latest .
+      
+    - name: Tag the Docker image with v1.00
+      run: docker tag timothyfudocker/ordertablewebopensource:latest timothyfudocker/ordertablewebopensource:v1.00
+
+    - name: Push the Docker image (latest tag)
+      run: docker push timothyfudocker/ordertablewebopensource:latest
+
+    - name: Push the Docker image (v1.00 tag)
+      run: docker push timothyfudocker/ordertablewebopensource:v1.00

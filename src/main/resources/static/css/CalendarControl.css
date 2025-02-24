@@ -1,0 +1,110 @@
+
+#IDofCalender table {
+  font-family: arial, verdana, helvetica, sans-serif;
+  font-size: 12pt;
+  border-left: 1px solid #993;
+  border-right: 1px solid #993;
+}
+
+#IDofCalender th {
+  font-weight: normal;
+}
+
+
+#IDofCalender .empty {
+  background-color: #CCC;
+  border: 1px solid #FFF;
+}
+
+
+
+#IDofCalender .weekday:hover,
+#IDofCalender .weekend:hover,
+#IDofCalender .current:hover {
+  color: #FFF;
+  background-color: #336;
+  border: 1px solid #999;
+}
+
+#CalendarControlIFrame {
+  display: none;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  height: 250px;
+  width: 250px;
+  z-index: 99;
+}
+
+#IDofCalender {
+  position:absolute;
+  background-color:#EFF;
+  margin:0;
+  padding:0;
+  display:none;
+  z-index: 100;
+}
+
+
+#IDofCalender th a {
+  font-weight: normal;
+  text-decoration: none;
+  color: #EEE;
+  padding: 1px;
+}
+
+#IDofCalender td {
+  text-align: center;
+}
+
+#IDofCalender .header {
+  background-color: #993;
+}
+
+#IDofCalender .weekday {
+  background-color: #DDD;
+  color: #000;
+}
+
+
+#IDofCalender .current {
+  border: 1px solid #339;
+  background-color: red;
+  color: #FFF;
+}
+
+#IDofCalender .weekday,
+#IDofCalender .current {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #FFF;
+  width: 2em;
+}
+
+
+#IDofCalender .previous {
+  text-align: left;
+}
+
+#IDofCalender .next {
+  text-align: right;
+}
+
+#IDofCalender .previous,
+#IDofCalender .next {
+  padding: 1px 3px 1px 3px;
+  font-size: 1.4em;
+}
+
+#IDofCalender .previous a,
+#IDofCalender .next a {
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#IDofCalender .title {
+  text-align: center;
+  font-weight: bold;
+  color: #FFF;
+}
